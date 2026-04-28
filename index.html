@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexo — Red de Confianza Premium</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="css/variables.css?v=7">
+    <link rel="stylesheet" href="css/base.css?v=7">
+    <link rel="stylesheet" href="css/components.css?v=7">
+    <link rel="stylesheet" href="css/sections.css?v=7">
+    <link rel="stylesheet" href="css/sections-extra.css?v=7">
+
+    <!-- Modular JS -->
+    <script type="module" src="js/main.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar (Black) -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand"><i data-lucide="network"></i> NEXO</a>
+            <div class="hamburger"><i data-lucide="menu"></i></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#como-funciona">Cómo Funciona</a></li>
+                <li><a href="#niveles">Niveles</a></li>
+                <li><a href="#mundos">12 Mundos</a></li>
+                <li><a href="#modelo">Modelo</a></li>
+                <li><a href="#inversores">Inversores</a></li>
+                <li><a href="#" id="loginBtn" class="btn btn-inverse">Acceso Sistema</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section con Imagen Local Descargada por el Usuario -->
+    <section class="hero" id="inicio">
+        <div class="video-container" style="background-color: #050505;">
+            <!-- Utiliza la imagen/animación webp local provista por el usuario -->
+            <img src="assets/hero-bg.webp" alt="Global Network Connection" class="bg-video" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="video-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%); z-index: 1;"></div>
+        </div>
+        <div class="container reveal hero-content" style="max-width: 1000px;">
+            <div class="badge-container">
+                <span class="badge">NEXO — RED DE CONFIANZA</span>
+            </div>
+            <h1 style="letter-spacing: -2px;">No entrás porque pagaste.<br>Entrás porque alguien te <span style="text-decoration: underline; text-underline-offset: 8px;">avala.</span></h1>
+            
+            <p>Nexo es una plataforma de compra, venta, servicios y asesoramiento donde cada transacción ocurre dentro de una red de personas que se conocen y se respaldan. No hay bots, ni reviews falsos. Solo cadenas de confianza humanas y verificadas.</p>
+            
+            <div class="hero-actions" style="margin-top: 3rem;">
+                <button class="btn btn-primary" id="generateLinkBtn" style="background: var(--text-inverse); color: var(--bg-dark) !important;">
+                    Generar Link de Aval (Simulador) <i data-lucide="link"></i>
+                </button>
+                <a href="#inversores" class="btn btn-outline" style="color: var(--text-inverse) !important; border-color: rgba(255,255,255,0.3);">
+                    Inversores Seed
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona (Diagrama Gráfico Visual) -->
+    <section class="section" id="como-funciona" style="background-color: var(--bg-surface);">
+        <div class="container reveal">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Un árbol que crece desde adentro.</h2>
+                <p style="max-width: 700px; margin: 0 auto;">No hay bots ni algoritmos. La red se construye mediante cadenas de confianza humanas reales, donde cada nodo tiene la piel en el juego.</p>
+                <div class="security-badge-big">
+                    <i data-lucide="shield-check"></i> Cero Fraude Garantizado
+                </div>
+            </div>
+            
+            <!-- Visual Flowchart -->
+            <div class="visual-pipeline">
+                
+                <!-- Step 1 -->
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">
+                        <i data-lucide="link" style="width: 40px; height: 40px;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">1. Aval Criptográfico</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Un usuario existente genera un link firmado con su ID que expira en 72hs.</p>
+                </div>
+
+                <div class="pipeline-arrow"><i data-lucide="arrow-right" style="width: 40px; height: 40px;"></i></div>
+
+                <!-- Step 2 -->
+                <div class="pipeline-step">
+                    <div class="pipeline-icon" style="background: var(--bg-dark); color: white; border: 4px solid var(--border-subtle);">
+                        <i data-lucide="user-check" style="width: 40px; height: 40px;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">2. Verificación</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Entras como Nivel 3. Validas DNI y Banco para subir tu Score y ganar cupos.</p>
+                </div>
+
+                <div class="pipeline-arrow"><i data-lucide="arrow-right" style="width: 40px; height: 40px;"></i></div>
+
+                <!-- Step 3 -->
+                <div class="pipeline-step" style="border: 2px solid var(--text-main);">
+                    <div class="pipeline-icon">
+                        <i data-lucide="network" style="width: 40px; height: 40px;"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">3. Reputación Ligada</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 0;">Si cometes fraude, tú y la persona que te avaló son expulsados de la red.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Niveles -->
+    <section class="section" id="niveles">
+        <div class="container reveal">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>La confianza se gana, no se compra.</h2>
+                <p>El nivel no se compra — se construye con verificación, historial y reputación.</p>
+            </div>
+            
+            <div class="grid-3 align-center">
+                <div class="card tier-card" style="box-shadow: none; border-top: 4px solid #ccc;">
+                    <h3>Nivel 3 (Explorador)</h3>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Acceso de exploración. Comprá en categorías básicas y explorá la red. El punto de partida de todos.</p>
+                </div>
+                <div class="card tier-card" style="box-shadow: none; border-top: 4px solid var(--text-muted);">
+                    <h3>Nivel 2 (Verificado)</h3>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Acceso a la mayoría de secciones. Puede ofrecer servicios, vender y dar asesoramiento básico.</p>
+                </div>
+                <div class="card tier-card premium" style="background: var(--bg-dark); color: white;">
+                    <h3 style="color: white;">Nivel 1 (Élite)</h3>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; color: rgba(255,255,255,0.8);">Acceso total. Transacciones de alto valor, asesoramiento premium y operaciones financieras sin restricciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 Mundos (Test Products) -->
+    <section class="section" id="mundos" style="background-color: var(--bg-surface);">
+        <div class="container reveal">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>12 mundos. Un criterio de entrada.</h2>
+                <p>Cada sección tiene expertos con cupos que crecen con buenas respuestas. No se compra visibilidad — se gana respondiendo bien.</p>
+            </div>
+            
+            <!-- Global Search Bar -->
+            <div class="search-bar-hero" style="background: white; border: 1px solid var(--border-subtle); max-width: 1000px; margin-bottom: 3rem;">
+                <input type="text" id="mainSearch" placeholder="Buscar productos de prueba, expertos o servicios..." style="color: var(--text-main);">
+                <button class="btn btn-primary" id="search-btn"><i data-lucide="search"></i> Buscar</button>
+            </div>
+
+            <!-- Market Grid para los productos simulados -->
+            <div class="grid-4" id="market-grid">
+                <!-- Inyectado por Javascript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelo de Negocio -->
+    <section class="section" id="modelo">
+        <div class="container reveal">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>El dinero fluye con la confianza.</h2>
+                <p>Flujo de valor por actor</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card text-center" style="box-shadow: none;">
+                    <div class="card-icon"><i data-lucide="shopping-cart" style="width: 32px; height: 32px;"></i></div>
+                    <h3>Comisiones (3-7%)</h3>
+                    <p>La fuente principal. Cada compra, venta y servicio genera un porcentaje para la plataforma.</p>
+                </div>
+                <div class="card text-center" style="box-shadow: none;">
+                    <div class="card-icon"><i data-lucide="award" style="width: 32px; height: 32px;"></i></div>
+                    <h3>Suscripciones Pro</h3>
+                    <p>Expertos y vendedores que quieren más cupos, visibilidad y herramientas analíticas.</p>
+                </div>
+                <div class="card text-center" style="box-shadow: none;">
+                    <div class="card-icon"><i data-lucide="share-2" style="width: 32px; height: 32px;"></i></div>
+                    <h3>Revenue Share</h3>
+                    <p>El motor viral. Los referidores ganan % de las operaciones de su sub-red, indefinidamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inversores / Contacto -->
+    <section class="section bg-dark" id="inversores">
+        <div class="container reveal">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Estamos construyendo. ¿Te sumás?</h2>
+                <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">Nexo es una idea con modelo definido, identidad clara y roadmap concreto. Buscamos personas que quieran acompañar el proceso desde el inicio.</p>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 3rem;">
+                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <h3>Inversores Seed</h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Capital inicial para MVP, infraestructura y primeros 500 usuarios. Equity a conversar.</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <h3>Co-founders</h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Full-stack, mobile o diseño de producto. Participación en equity desde el día 0.</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <h3>Early Adopters</h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Los primeros 100 usuarios que co-diseñen el producto. Acceso Nivel 1 garantizado.</p>
+                </div>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form class="card" style="background: white;" onsubmit="event.preventDefault(); alert('Postulación enviada correctamente.');">
+                    <div class="form-group">
+                        <label style="color: #111;">Nombre</label>
+                        <input type="text" class="form-control" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #111;">Email</label>
+                        <input type="email" class="form-control" required placeholder="usuario@dominio.com">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: #111;">Perfil:</label>
+                        <select class="form-control" style="cursor: pointer;">
+                            <option>Inversor Seed</option>
+                            <option>Co-founder Técnico</option>
+                            <option>Early Adopter</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1.2rem; margin-top: 1rem;">Postular mi Perfil <i data-lucide="arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Simulador de Invitación -->
+    <div id="inviteModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div class="card" style="background: white; width: 90%; max-width: 500px; text-align: center; position: relative; margin: 20px;">
+            <button id="closeModal" style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+            <h3 style="color: var(--bg-dark); margin-bottom: 1rem;">Generador de Aval (Simulador)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem;">Estás a punto de crear un enlace criptográfico. Recuerda: tu reputación está ligada a la persona que invites.</p>
+            
+            <div style="background: var(--bg-surface); border: 2px dashed var(--border-subtle); padding: 1.5rem; border-radius: 8px; font-family: monospace; font-size: 1rem; word-break: break-all; margin-bottom: 1rem; color: var(--text-main);" id="generatedLink">
+                Esperando generación...
+            </div>
+            
+            <p style="font-size: 0.85rem; color: red; margin-bottom: 1.5rem;"><i data-lucide="clock" style="width: 14px; display: inline-block;"></i> Expira en 72hs</p>
+            
+            <button class="btn btn-primary" id="copyLinkBtn" style="width: 100%;">Generar y Copiar Link</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center" style="background: black; padding: 3rem 0; border-top: 1px solid #333;">
+        <div class="container">
+            <div class="brand" style="justify-content: center; margin-bottom: 1rem; color: white;">
+                <i data-lucide="network"></i> NEXO
+            </div>
+            <p style="margin-bottom: 0; color: rgba(255,255,255,0.5); font-size: 0.9rem;">Nexo — Red de Confianza · Prototipo conceptual · Todos los derechos reservados · 2025</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
