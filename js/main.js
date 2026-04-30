@@ -1,5 +1,5 @@
 import { initNavbar } from './modules/navbar.js';
-import { initScrollReveals } from './modules/animations.js';
+import { initScrollReveals, initCounters } from './modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Icons
@@ -12,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Initialize UI Modules
     initNavbar();
     initScrollReveals();
+    initCounters();
 });

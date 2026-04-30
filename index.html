@@ -4,47 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexo — Red de Confianza Premium</title>
+    <title>Nexo — Red de Confianza Premium | Compra, Venta y Servicios Verificados</title>
+    <meta name="description" content="Nexo es la primera red de confianza donde cada transacción ocurre entre personas verificadas. Compra, venta, servicios y asesoramiento sin fraude, respaldados por cadenas de confianza humanas.">
+    <meta name="keywords" content="red de confianza, marketplace verificado, compra segura, servicios verificados, plataforma premium, anti fraude">
+    <meta name="author" content="Nexo Trust Network">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nexo.trust/">
 
-    <!-- Fonts & Icons -->
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nexo — Red de Confianza Premium">
+    <meta property="og:description" content="La primera plataforma donde cada transacción está respaldada por cadenas de confianza humanas y verificadas. Cero fraude garantizado.">
+    <meta property="og:url" content="https://nexo.trust/">
+    <meta property="og:image" content="assets/hero-bg.webp">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Fonts & Icons (preconnect for speed) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
 
     <!-- Modular CSS -->
-    <link rel="stylesheet" href="css/variables.css?v=7">
-    <link rel="stylesheet" href="css/base.css?v=7">
-    <link rel="stylesheet" href="css/components.css?v=7">
-    <link rel="stylesheet" href="css/sections.css?v=7">
-    <link rel="stylesheet" href="css/sections-extra.css?v=7">
+    <link rel="stylesheet" href="css/variables.css?v=8">
+    <link rel="stylesheet" href="css/base.css?v=8">
+    <link rel="stylesheet" href="css/components.css?v=8">
+    <link rel="stylesheet" href="css/sections.css?v=8">
+    <link rel="stylesheet" href="css/sections-extra.css?v=8">
 
     <!-- Modular JS -->
     <script type="module" src="js/main.js" defer></script>
     <script src="js/app.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Nexo",
+        "description": "Red de confianza premium para compra, venta, servicios y asesoramiento verificado",
+        "url": "https://nexo.trust",
+        "applicationCategory": "Marketplace",
+        "operatingSystem": "Web"
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Navbar (Black) -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="brand"><i data-lucide="network"></i> NEXO</a>
-            <div class="hamburger"><i data-lucide="menu"></i></div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#como-funciona">Cómo Funciona</a></li>
-                <li><a href="#niveles">Niveles</a></li>
-                <li><a href="#mundos">12 Mundos</a></li>
-                <li><a href="#modelo">Modelo</a></li>
-                <li><a href="#inversores">Inversores</a></li>
-                <li><a href="#" id="loginBtn" class="btn btn-inverse">Acceso Sistema</a></li>
+    <!-- Skip to main content (Accessibility) -->
+    <a href="#inicio" class="skip-link" id="skip-nav">Ir al contenido principal</a>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar" role="banner">
+        <nav class="container nav-container" aria-label="Navegación principal">
+            <a href="#" class="brand" aria-label="Nexo - Inicio"><i data-lucide="network"></i> NEXO</a>
+            <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links" id="hamburger-btn">
+                <i data-lucide="menu" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="#como-funciona" role="menuitem">Cómo Funciona</a></li>
+                <li role="none"><a href="#niveles" role="menuitem">Niveles</a></li>
+                <li role="none"><a href="#mundos" role="menuitem">12 Mundos</a></li>
+                <li role="none"><a href="#modelo" role="menuitem">Modelo</a></li>
+                <li role="none"><a href="#inversores" role="menuitem">Inversores</a></li>
+                <li role="none"><a href="#" id="loginBtn" class="btn btn-inverse" role="menuitem">Acceso Sistema</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <!-- Hero Section con Imagen Local Descargada por el Usuario -->
+    <!-- Hero Section con Video de Planeta Tierra Conectado -->
     <section class="hero" id="inicio">
         <div class="video-container" style="background-color: #050505;">
-            <!-- Utiliza la imagen/animación webp local provista por el usuario -->
-            <img src="assets/hero-bg.webp" alt="Global Network Connection" class="bg-video" style="width: 100%; height: 100%; object-fit: cover;">
-            <div class="video-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%); z-index: 1;"></div>
+            <!-- Video de la Tierra rotando en el espacio — red global de conexión -->
+            <video autoplay muted loop playsinline class="bg-video" poster="assets/hero-bg.webp">
+                <source src="assets/hero-video.mp4" type="video/mp4">
+                <!-- Fallback a imagen si el video no carga -->
+                <img src="assets/hero-bg.webp" alt="Global Network Connection" style="width: 100%; height: 100%; object-fit: cover;">
+            </video>
+            <div class="video-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%); z-index: 1;"></div>
         </div>
         <div class="container reveal hero-content" style="max-width: 1000px;">
             <div class="badge-container">
@@ -61,6 +102,26 @@
                 <a href="#inversores" class="btn btn-outline" style="color: var(--text-inverse) !important; border-color: rgba(255,255,255,0.3);">
                     Inversores Seed
                 </a>
+            </div>
+
+            <!-- Stats Bar Visual -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value" data-count="0">0%</span>
+                    <span class="stat-label">Fraude Histórico</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="12">0</span>
+                    <span class="stat-label">Mundos / Verticales</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="3">0</span>
+                    <span class="stat-label">Niveles de Acceso</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="100" data-suffix="%">0%</span>
+                    <span class="stat-label">Trazabilidad</span>
+                </div>
             </div>
         </div>
     </section>
@@ -123,17 +184,45 @@
             </div>
             
             <div class="grid-3 align-center">
+                <!-- Nivel 3 -->
                 <div class="card tier-card" style="box-shadow: none; border-top: 4px solid #ccc;">
-                    <h3>Nivel 3 (Explorador)</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Acceso de exploración. Comprá en categorías básicas y explorá la red. El punto de partida de todos.</p>
+                    <div class="tier-icon-wrap"><i data-lucide="compass" style="width:32px;height:32px;"></i></div>
+                    <h3>Nivel 3 — Explorador</h3>
+                    <div class="tier-trust-bar"><div class="tier-trust-fill" style="width:33%"></div></div>
+                    <span class="tier-trust-label">Confianza: Básica</span>
+                    <ul class="tier-features">
+                        <li><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Compra en categorías básicas</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Explorar la red</li>
+                        <li><i data-lucide="x" style="width:16px;height:16px;color:#ccc;"></i> Vender productos</li>
+                        <li><i data-lucide="x" style="width:16px;height:16px;color:#ccc;"></i> Asesoramiento</li>
+                    </ul>
                 </div>
+                <!-- Nivel 2 -->
                 <div class="card tier-card" style="box-shadow: none; border-top: 4px solid var(--text-muted);">
-                    <h3>Nivel 2 (Verificado)</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Acceso a la mayoría de secciones. Puede ofrecer servicios, vender y dar asesoramiento básico.</p>
+                    <div class="tier-icon-wrap" style="border-color:var(--text-muted);"><i data-lucide="shield" style="width:32px;height:32px;"></i></div>
+                    <h3>Nivel 2 — Verificado</h3>
+                    <div class="tier-trust-bar"><div class="tier-trust-fill" style="width:66%;background:var(--text-muted);"></div></div>
+                    <span class="tier-trust-label">Confianza: Media</span>
+                    <ul class="tier-features">
+                        <li><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Todo del Nivel 3</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Ofrecer servicios</li>
+                        <li><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Vender productos</li>
+                        <li><i data-lucide="x" style="width:16px;height:16px;color:#ccc;"></i> Operaciones financieras</li>
+                    </ul>
                 </div>
+                <!-- Nivel 1 -->
                 <div class="card tier-card premium" style="background: var(--bg-dark); color: white;">
-                    <h3 style="color: white;">Nivel 1 (Élite)</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem; color: rgba(255,255,255,0.8);">Acceso total. Transacciones de alto valor, asesoramiento premium y operaciones financieras sin restricciones.</p>
+                    <div class="tier-badge-elite">ÉLITE</div>
+                    <div class="tier-icon-wrap" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);color:white;"><i data-lucide="crown" style="width:32px;height:32px;"></i></div>
+                    <h3 style="color: white;">Nivel 1 — Élite</h3>
+                    <div class="tier-trust-bar" style="background:rgba(255,255,255,0.15);"><div class="tier-trust-fill" style="width:100%;background:white;"></div></div>
+                    <span class="tier-trust-label" style="color:rgba(255,255,255,0.7);">Confianza: Máxima</span>
+                    <ul class="tier-features">
+                        <li style="color:rgba(255,255,255,0.8);"><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Todo del Nivel 2</li>
+                        <li style="color:rgba(255,255,255,0.8);"><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Transacciones de alto valor</li>
+                        <li style="color:rgba(255,255,255,0.8);"><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Asesoramiento premium</li>
+                        <li style="color:rgba(255,255,255,0.8);"><i data-lucide="check" style="width:16px;height:16px;color:#00c853;"></i> Operaciones financieras</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -172,17 +261,44 @@
                 <div class="card text-center" style="box-shadow: none;">
                     <div class="card-icon"><i data-lucide="shopping-cart" style="width: 32px; height: 32px;"></i></div>
                     <h3>Comisiones (3-7%)</h3>
-                    <p>La fuente principal. Cada compra, venta y servicio genera un porcentaje para la plataforma.</p>
+                    <p>Cada compra, venta y servicio genera un porcentaje para la plataforma.</p>
+                    <div class="revenue-bar-wrap">
+                        <div class="revenue-bar-label"><span>Compra/Venta</span><span>7%</span></div>
+                        <div class="revenue-bar"><div class="revenue-bar-fill" style="width:70%"></div></div>
+                        <div class="revenue-bar-label"><span>Servicios</span><span>5%</span></div>
+                        <div class="revenue-bar"><div class="revenue-bar-fill" style="width:50%"></div></div>
+                        <div class="revenue-bar-label"><span>Asesoramiento</span><span>3%</span></div>
+                        <div class="revenue-bar"><div class="revenue-bar-fill" style="width:30%"></div></div>
+                    </div>
                 </div>
                 <div class="card text-center" style="box-shadow: none;">
                     <div class="card-icon"><i data-lucide="award" style="width: 32px; height: 32px;"></i></div>
                     <h3>Suscripciones Pro</h3>
-                    <p>Expertos y vendedores que quieren más cupos, visibilidad y herramientas analíticas.</p>
+                    <p>Más cupos, visibilidad y herramientas analíticas para expertos.</p>
+                    <div class="sub-tiers">
+                        <div class="sub-tier"><i data-lucide="zap" style="width:18px;height:18px;"></i><span>Starter</span><strong>Gratis</strong></div>
+                        <div class="sub-tier active"><i data-lucide="star" style="width:18px;height:18px;"></i><span>Pro</span><strong>$29/mes</strong></div>
+                        <div class="sub-tier"><i data-lucide="gem" style="width:18px;height:18px;"></i><span>Enterprise</span><strong>Custom</strong></div>
+                    </div>
                 </div>
                 <div class="card text-center" style="box-shadow: none;">
                     <div class="card-icon"><i data-lucide="share-2" style="width: 32px; height: 32px;"></i></div>
                     <h3>Revenue Share</h3>
-                    <p>El motor viral. Los referidores ganan % de las operaciones de su sub-red, indefinidamente.</p>
+                    <p>Los referidores ganan % de las operaciones de su sub-red.</p>
+                    <div class="referral-visual">
+                        <div class="ref-node ref-you"><i data-lucide="user" style="width:20px;height:20px;"></i><span>Tú</span></div>
+                        <div class="ref-lines">
+                            <div class="ref-line"></div>
+                            <div class="ref-line"></div>
+                            <div class="ref-line"></div>
+                        </div>
+                        <div class="ref-nodes-row">
+                            <div class="ref-node ref-child"><i data-lucide="user" style="width:14px;height:14px;"></i><span>2%</span></div>
+                            <div class="ref-node ref-child"><i data-lucide="user" style="width:14px;height:14px;"></i><span>2%</span></div>
+                            <div class="ref-node ref-child"><i data-lucide="user" style="width:14px;height:14px;"></i><span>2%</span></div>
+                        </div>
+                        <p style="font-size:0.8rem;margin:0.5rem 0 0;color:var(--text-muted);">Ganancias indefinidas por sub-red</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,17 +313,23 @@
             </div>
 
             <div class="grid-3" style="margin-bottom: 3rem;">
-                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                <div class="card investor-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <div class="investor-icon"><i data-lucide="trending-up" style="width:36px;height:36px;"></i></div>
                     <h3>Inversores Seed</h3>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Capital inicial para MVP, infraestructura y primeros 500 usuarios. Equity a conversar.</p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Capital inicial para MVP, infraestructura y primeros 500 usuarios.</p>
+                    <div class="investor-tag"><i data-lucide="dollar-sign" style="width:14px;height:14px;"></i> Equity a conversar</div>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                <div class="card investor-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <div class="investor-icon"><i data-lucide="code-2" style="width:36px;height:36px;"></i></div>
                     <h3>Co-founders</h3>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Full-stack, mobile o diseño de producto. Participación en equity desde el día 0.</p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Full-stack, mobile o diseño de producto. Desde el día 0.</p>
+                    <div class="investor-tag"><i data-lucide="users" style="width:14px;height:14px;"></i> Equity desde día 0</div>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                <div class="card investor-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <div class="investor-icon"><i data-lucide="rocket" style="width:36px;height:36px;"></i></div>
                     <h3>Early Adopters</h3>
-                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Los primeros 100 usuarios que co-diseñen el producto. Acceso Nivel 1 garantizado.</p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Los primeros 100 usuarios que co-diseñen el producto.</p>
+                    <div class="investor-tag"><i data-lucide="crown" style="width:14px;height:14px;"></i> Nivel 1 garantizado</div>
                 </div>
             </div>
             
@@ -253,12 +375,13 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer text-center" style="background: black; padding: 3rem 0; border-top: 1px solid #333;">
+    <footer class="footer text-center" id="footer" style="background: black; padding: 3rem 0; border-top: 1px solid #333;" role="contentinfo">
         <div class="container">
             <div class="brand" style="justify-content: center; margin-bottom: 1rem; color: white;">
-                <i data-lucide="network"></i> NEXO
+                <i data-lucide="network" aria-hidden="true"></i> NEXO
             </div>
-            <p style="margin-bottom: 0; color: rgba(255,255,255,0.5); font-size: 0.9rem;">Nexo — Red de Confianza · Prototipo conceptual · Todos los derechos reservados · 2025</p>
+            <p style="margin-bottom: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.9rem;">Nexo — Red de Confianza · Prototipo conceptual · Todos los derechos reservados · 2026</p>
+            <p style="margin-bottom: 0; color: rgba(255,255,255,0.3); font-size: 0.8rem;">Diseñado con propósito. Construido con confianza.</p>
         </div>
     </footer>
 

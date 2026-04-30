@@ -1,5 +1,5 @@
 export function initNavbar() {
-    const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger-btn') || document.querySelector('.hamburger');
     const navLinks = document.getElementById('nav-links');
     const navbar = document.getElementById('navbar');
 
@@ -7,7 +7,8 @@ export function initNavbar() {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('open');
             const isOpen = navLinks.classList.contains('open');
-            hamburger.innerHTML = isOpen ? '<i data-lucide="x" size="28"></i>' : '<i data-lucide="menu" size="28"></i>';
+            hamburger.innerHTML = isOpen ? '<i data-lucide="x" aria-hidden="true"></i>' : '<i data-lucide="menu" aria-hidden="true"></i>';
+            hamburger.setAttribute('aria-expanded', isOpen);
             if (window.lucide) window.lucide.createIcons();
         });
 
@@ -16,7 +17,8 @@ export function initNavbar() {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
                     navLinks.classList.remove('open');
-                    hamburger.innerHTML = '<i data-lucide="menu" size="28"></i>';
+                    hamburger.innerHTML = '<i data-lucide="menu" aria-hidden="true"></i>';
+                    hamburger.setAttribute('aria-expanded', 'false');
                     if (window.lucide) window.lucide.createIcons();
                 }
             });

@@ -21,3 +21,40 @@ export function initScrollReveals() {
         reveals.forEach(reveal => reveal.classList.add('active'));
     }
 }
+
+export function initCounters() {
+    const counters = document.querySelectorAll('.stat-value[data-count]');
+    if (!counters.length) return;
+
+    const animateCounter = (el) => {
+        const target = parseInt(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const duration = 2000;
+        const start = performance.now();
+
+        const update = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(target * eased);
+            el.textContent = current + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    };
+
+    if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => obs.observe(c));
+    } else {
+        counters.forEach(c => animateCounter(c));
+    }
+}
